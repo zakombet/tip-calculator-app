@@ -1,0 +1,207 @@
+/* For mobile device */
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+body {
+    background-color:  hsl(185, 41%, 84%);
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Splitter Title */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 140px 0px 80px 0px;
+}
+
+/* Overall tip calculator container */
+.tip-calculator-container {
+    position: fixed;
+    background-color: white;
+    border-radius: 20px;
+    height: 500px;
+    width: 1000px;
+    margin: 0% 20%;
+}
+
+/* Bill portion - including label, formfield, $ img */
+.bill-portion-container {
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.bill-label {
+    font-family: 'Space Mono';
+    font-weight: 500;
+    color: hsl(184, 14%, 43%);
+    padding: 40px 43px 5px;
+}
+
+/* $ image in formfield */ 
+.bill-portion-container img {
+    position: relative;
+    left: 60px;
+    bottom: 90px;
+}
+
+.form-control {
+    background-color:hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    border: none;
+    font-family: 'Space Mono';
+    font-size: 24px;
+    font-weight: 700;
+    margin: 5px 40px 50px;
+    padding: 10px;
+    text-align: right;
+    width: 45%;
+}
+
+.form-control:focus {
+    border-color:  hsl(183, 100%, 15%);
+    border: 3px;
+    border-color:hsl(172, 67%, 45%);
+    border-style: solid;
+    color: hsl(183, 100%, 15%);;
+    cursor: pointer;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.bill-input-formfield:on {
+    border-color: hsl(183, 100%, 15%);
+    border-radius: 5em;
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+}
+
+.tip-label, .number-of-people-label {
+    font-family: 'Space Mono';
+    color: hsl(184, 14%, 43%);
+    padding: 5px 50px 5px;
+}
+
+.row.align-items-end {
+    margin: 10px 40px 5px;
+}
+
+.btn-primary {
+    background-color: hsl(183, 100%, 15%);
+    border: none;
+    font-family: 'Space Mono';
+    font-size: large;
+    font-weight: 500; 
+    height: 50px;
+    margin: 5px;
+    width: 140px;
+}
+
+.btn-primary:focus, .btn-primary:hover {
+    background-color: hsl(172, 67%, 45%);
+    box-shadow: none !important;
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+    outline: none !important;
+}
+
+.number-of-people-container img {
+    position: relative;
+    left: 65px;
+    bottom: 90px;
+}
+
+.calculation-container {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 20px;
+    bottom: 460px;
+    height: 420px;
+    left: 530px;
+    position: relative;
+    width: 440px;
+}
+
+#custom-tip-input, #custom-tip-input:hover {
+    cursor: pointer;
+    height: 50px;
+    margin: 5px;
+    text-align: center;
+    width: 140px;
+}
+
+#custom-tip-input:focus {
+    background-color:hsl(189, 41%, 97%);
+    border-color:hsl(172, 67%, 45%);
+    border-style: solid;
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+    outline: none !important;
+    overflow-y: hidden !important;
+    box-shadow: none !important;
+}
+
+#tip-amount-row {
+    left: 10%;
+    top: 10%;
+    position: relative;
+}
+
+#total-amount-row {
+    left: 10%;
+    top: 15%;
+    position: relative;
+}
+
+.tip-amount-per-person-label, .total-amount-per-person-label {
+    color:hsl(189, 41%, 97%);
+    font-family: 'Space Mono';
+    font-size: 16px;
+}
+
+.tip-amount-per-person-sublabel, .total-amount-per-person-sublabel {
+    color:hsl(184, 14%, 56%);
+    font-family: 'Space Mono';
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+#tip-amount-per-person-display, #total-amount-per-person-display { 
+    color: hsl(172, 67%, 45%);
+    font-family: 'Space Mono';
+    font-size: 42px;
+    font-weight: 900;
+    margin-right: 75px;
+}
+
+.reset-button-row {
+    bottom: 50px;
+    right: 35px;
+    position: absolute;
+}
+
+.btn-secondary {
+    background-color: hsl(172, 67%, 45%);
+    border-style: none;
+    color: hsl(183, 100%, 15%);
+    font-family: 'Space Mono';
+    font-size: large;
+    font-weight: 900;
+    height: 55px;
+    opacity: 0.2;
+    width: 380px;
+}
+
+.btn-secondary:focus, .btn-secondary:hover {
+    background-color:  hsl(185, 41%, 84%) !important;
+    border-style: none;
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+    font-family: 'Space Mono';
+    font-size: large;
+    font-weight: 900;
+    height: 55px;
+    opacity: 1 !important;
+    width: 380px;
+}
