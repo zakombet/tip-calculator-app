@@ -2,7 +2,11 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 
 body {
+    align-items: center;
     background-color:  hsl(185, 41%, 84%);
+    display: flex;
+    justify-content:  center;
+    min-height: 100vh;
 }
 
 input[type=number] {
@@ -12,14 +16,14 @@ input[type=number] {
 /* Splitter Title */
 .center {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 140px 0px 80px 0px;
+    margin: 0 auto;
+    padding: 140px 0px 80px;
+    text-align: center;
 }
 
 /* Overall tip calculator container */
 .tip-calculator-container {
-    position: fixed;
+    /* position: fixed; */
     background-color: white;
     border-radius: 20px;
     height: 500px;
@@ -30,6 +34,10 @@ input[type=number] {
 /* Bill portion - including label, formfield, $ img */
 .bill-portion-container {
     height: 150px;
+    margin-bottom: 15px;
+}
+
+.tip-selection-container {
     margin-bottom: 15px;
 }
 
@@ -62,21 +70,21 @@ input[type=number] {
 
 .form-control:focus {
     border-color:  hsl(183, 100%, 15%);
-    border: 3px;
+    border: 2px;
     border-color:hsl(172, 67%, 45%);
     border-style: solid;
     color: hsl(183, 100%, 15%);;
     cursor: pointer;
-    outline: none !important;
+    outline: none;
     box-shadow: none !important;
 }
 
-.bill-input-formfield:on {
+/* .bill-input-formfield:on {
     border-color: hsl(183, 100%, 15%);
     border-radius: 5em;
     color: hsl(183, 100%, 15%);
     cursor: pointer;
-}
+} */
 
 .tip-label, .number-of-people-label {
     font-family: 'Space Mono';
@@ -116,8 +124,8 @@ input[type=number] {
 .calculation-container {
     background-color: hsl(183, 100%, 15%);
     border-radius: 20px;
-    bottom: 460px;
-    height: 420px;
+    bottom: 485px;
+    height: 430px;
     left: 530px;
     position: relative;
     width: 440px;
@@ -189,7 +197,7 @@ input[type=number] {
     font-size: large;
     font-weight: 900;
     height: 55px;
-    opacity: 0.2;
+    /* opacity: 0.2; */
     width: 380px;
 }
 

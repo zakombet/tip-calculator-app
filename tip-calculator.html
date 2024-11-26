@@ -10,58 +10,60 @@
         <link rel="stylesheet" href="tip-calculator.css">
     </head>
     <body>
-        <div class="logo-container">
-            <img src="../images/logo.svg" alt="Splitter Logo" class="center">
-        </div>
-        <div class="tip-calculator-container">
-            <form>
-                <div class="bill-portion-container">
-                    <label for="BillInput" class="bill-label">Bill</label>
-                    <input type="text" class="form-control" id="BillInput" placeholder="0">
-                    <img role="img" src="../images/icon-dollar.svg"/> 
-                </div>
-                <div class="tip-selection-container">
-                    <label for="TipPercentage" class="tip-label">Select Tip %</label><br>
-                    <div class="row align-items-end">
-                        <button type="button" class="btn btn-primary" value="5">5%</button>
-                        <button type="button" class="btn btn-primary" value="10">10%</button>
-                        <button type="button" class="btn btn-primary" value="15">15%</button>
+        <div class="container">
+            <div class="logo-container">
+                <img src="../Project Resorces/images/logo.svg" alt="Splitter Logo" class="center">
+            </div>
+            <div class="tip-calculator-container">
+                <form>
+                    <div class="bill-portion-container">
+                        <label for="BillInput" class="bill-label">Bill</label>
+                        <input type="text" class="form-control" id="BillInput" placeholder="0">
+                        <img role="img" src="../Project Resorces/images/icon-dollar.svg"/> 
                     </div>
-                    <div class="row align-items-end">
-                        <button type="button" class="btn btn-primary" value="25">25%</button>
-                        <button type="button" class="btn btn-primary" value="50">50%</button>
-                        <input type="number" class="form-control" id="custom-tip-input" placeholder="Custom">
-                    </div>
-                </div>
-                <div class="number-of-people-container">
-                    <label for="NumberOfPeopleInput" class="number-of-people-label">Number of People</label><br>
-                    <input type="text" class="form-control" id="NumberOfPeopleInput" placeholder="0"/>
-                    <img role="img" src="../images/icon-person.svg"/> 
-                </div>
-                <div class="calculation-container">
-                    <div class="row" id="tip-amount-row">
-                        <div class="col">
-                            <label for="" class="tip-amount-per-person-label">Tip Amount</label><br>
-                            <label for="" class="tip-amount-per-person-sublabel">/ person</label>
+                    <div class="tip-selection-container">
+                        <label for="TipPercentage" class="tip-label">Select Tip %</label><br>
+                        <div class="row align-items-end">
+                            <button type="button" class="btn btn-primary" value="5">5%</button>
+                            <button type="button" class="btn btn-primary" value="10">10%</button>
+                            <button type="button" class="btn btn-primary" value="15">15%</button>
                         </div>
-                        <div class="col">
-                            <p id="tip-amount-per-person-display">$0.00</p>
-                        </div> 
-                    </div>
-                    <div class="row" id="total-amount-row">
-                        <div class="col">
-                            <label for="" class="total-amount-per-person-label">Total</label><br>
-                            <label for="" class="total-amount-per-person-sublabel">/ person</label>
-                        </div>
-                        <div class="col">
-                            <p id="total-amount-per-person-display">$0.00</p>
+                        <div class="row align-items-end">
+                            <button type="button" class="btn btn-primary" value="25">25%</button>
+                            <button type="button" class="btn btn-primary" value="50">50%</button>
+                            <input type="number" class="form-control" id="custom-tip-input" placeholder="Custom">
                         </div>
                     </div>
-                    <div class="reset-button-row">
-                        <button type="button" class="btn btn-secondary">RESET</button>
+                    <div class="number-of-people-container">
+                        <label for="NumberOfPeopleInput" class="number-of-people-label">Number of People</label><br>
+                        <input type="text" class="form-control" id="NumberOfPeopleInput" placeholder="0"/>
+                        <img role="img" src="../Project Resorces/images/icon-person.svg"/> 
                     </div>
-                </div>
-            </form>
+                    <div class="calculation-container">
+                        <div class="row" id="tip-amount-row">
+                            <div class="col">
+                                <label for="" class="tip-amount-per-person-label">Tip Amount</label><br>
+                                <label for="" class="tip-amount-per-person-sublabel">/ person</label>
+                            </div>
+                            <div class="col">
+                                <p id="tip-amount-per-person-display">$0.00</p>
+                            </div> 
+                        </div>
+                        <div class="row" id="total-amount-row">
+                            <div class="col">
+                                <label for="" class="total-amount-per-person-label">Total</label><br>
+                                <label for="" class="total-amount-per-person-sublabel">/ person</label>
+                            </div>
+                            <div class="col">
+                                <p id="total-amount-per-person-display">$0.00</p>
+                            </div>
+                        </div>
+                        <div class="reset-button-row">
+                            <button type="button" class="btn btn-secondary">RESET</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
         <script type="text/javascript" src="tip-calculator.js"></script>
     </body>
