@@ -8,6 +8,17 @@ const tipAmountDisplay = document.getElementById("tip-amount-per-person-display"
 const totalAmountDisplay = document.getElementById("total-amount-per-person-display");
 const resetButton = document.querySelector(".btn-secondary");
 
+document.addEventListener("DOMContentLoaded", () => {
+    // Reset input values
+    document.getElementById("BillInput").value = "0";
+    document.getElementById("custom-tip-input").value = "";
+    document.getElementById("NumberOfPeopleInput").value = "0";
+
+    // Reset display values
+    document.getElementById("tip-amount-per-person-display").textContent = "$0.00";
+    document.getElementById("total-amount-per-person-display").textContent = "$0.00";
+});
+
 // Function to calculate and update results
 function calculateTip() {
     // Parse input values
