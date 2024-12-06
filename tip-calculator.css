@@ -1,6 +1,79 @@
 /* For mobile device */
 @import 'node_modules/bootstrap/scss/bootstrap';
 
+/* For mobile devices */
+@media (max-width: 576px) {
+    
+    body {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    /* Splitter Title */
+    .center {
+        display: block;
+        margin:  auto !important;
+        padding: 60px !important;
+        text-align: center;
+    }
+
+    .tip-calculator-container {
+        background-color: white;
+        max-height: 150%;
+        max-width: 108%;
+    }
+
+    /* Bill portion - including label, formfield, $ img */
+    .bill-portion-container {
+        height: 150px;
+        margin-bottom: 15px;
+    }
+
+    /* Bill label */
+    .bill-label {
+        font-family: 'Space Mono';
+        font-weight: 900;
+        color: hsl(184, 14%, 43%);
+        padding: 40px 43px 5px;
+    }
+
+    /* Bill input form field */
+    .form-control {
+        background-color:hsl(189, 41%, 97%);
+        color: hsl(183, 100%, 15%);
+        border: none;
+        font-family: 'Space Mono';
+        font-size: 24px;
+        font-weight: 700;
+        margin: 5px 40px 50px;
+        padding: 10px;
+        text-align: right;
+        width: 82% !important;
+    } 
+
+    /* Tip Percentage - including label, buttons, custom input */
+    .tip-selection-container .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .tip-selection-container .btn,
+    .tip-selection-container #custom-tip-input {
+        width: 100%; /* Ensure full width for grid items */
+    }
+
+
+
+
+}
+
+
+
 body {
     align-items: center;
     background-color:  hsl(185, 41%, 84%);
@@ -23,12 +96,14 @@ input[type=number] {
 
 /* Overall tip calculator container */
 .tip-calculator-container {
-    /* position: fixed; */
+    position: relative;
     background-color: white;
     border-radius: 20px;
     height: 500px;
     width: 1000px;
     margin: 0% 20%;
+    bottom: 10px;
+    right: 100px;
 }
 
 /* Bill portion - including label, formfield, $ img */
@@ -78,13 +153,6 @@ input[type=number] {
     outline: none;
     box-shadow: none !important;
 }
-
-/* .bill-input-formfield:on {
-    border-color: hsl(183, 100%, 15%);
-    border-radius: 5em;
-    color: hsl(183, 100%, 15%);
-    cursor: pointer;
-} */
 
 .tip-label, .number-of-people-label {
     font-family: 'Space Mono';
@@ -197,11 +265,13 @@ input[type=number] {
     font-size: large;
     font-weight: 900;
     height: 55px;
-    /* opacity: 0.2; */
-    width: 380px;
+    opacity: 0.2 !important;
+    position:relative;
+    left: 10px;
+    width: 390px;
 }
 
-.btn-secondary:focus, .btn-secondary:hover {
+.btn-secondary:hover {
     background-color:  hsl(185, 41%, 84%) !important;
     border-style: none;
     color: hsl(183, 100%, 15%);
@@ -211,5 +281,5 @@ input[type=number] {
     font-weight: 900;
     height: 55px;
     opacity: 1 !important;
-    width: 380px;
+    width: 390px;
 }
