@@ -1,18 +1,18 @@
 // Retrieve references to form elements
 // Get references to form elements
-const billInput = document.getElementById("BillInput");
+const billInput = document.getElementById("bill-input");
 const tipButtons = document.querySelectorAll(".btn-primary");
 const customTipInput = document.getElementById("custom-tip-input");
-const peopleInput = document.getElementById("NumberOfPeopleInput");
+const peopleInput = document.getElementById("number-of-people-input");
 const tipAmountDisplay = document.getElementById("tip-amount-per-person-display");
 const totalAmountDisplay = document.getElementById("total-amount-per-person-display");
 const resetButton = document.querySelector(".btn-secondary");
 
 document.addEventListener("DOMContentLoaded", () => {
     // Reset input values
-    document.getElementById("BillInput").value = "0";
+    document.getElementById("bill-input").value = "0";
     document.getElementById("custom-tip-input").value = "";
-    document.getElementById("NumberOfPeopleInput").value = "0";
+    document.getElementById("number-of-people-input").value = "0";
 
     // Reset display values
     document.getElementById("tip-amount-per-person-display").textContent = "$0.00";
@@ -37,7 +37,7 @@ function calculateTip() {
         tipAmountDisplay.textContent = "$0.00";
         totalAmountDisplay.textContent = "$0.00";
         return;
-    }
+    } 
 
     // Calculate tip and total amounts
     const tipAmount = (bill * tipPercentage) / 100;

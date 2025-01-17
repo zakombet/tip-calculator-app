@@ -1,167 +1,134 @@
-/* For mobile device */
-@import 'node_modules/bootstrap/scss/bootstrap';
-
 /* For mobile devices */
-@media (max-width: 576px) {
-    
-    body {
-        align-items: center;
+@media screen and (max-width: 375px) {
+    .logo-container {
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        margin: 0;
-        overflow: hidden;
     }
 
-    /* Splitter Title */
-    .center {
-        display: block;
-        margin:  auto !important;
-        padding: 60px !important;
-        text-align: center;
+    .logo-container img {
+        margin: 10% !important;
     }
 
     .tip-calculator-container {
-        background-color: white;
-        max-height: 150%;
-        max-width: 108%;
+        background-color: white !important;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column !important;
+        height: 90vh !important;
+        padding: 30px 25px !important;
+        width: 100vw !important;
     }
 
-    /* Bill portion - including label, formfield, $ img */
-    .bill-portion-container {
-        height: 150px;
-        margin-bottom: 15px;
+    .input-container {
+        display: flex;
+        flex-direction: column;
     }
 
-    /* Bill label */
-    .bill-label {
+    .btn-primary {
+        background-color: hsl(183, 100%, 15%);
+        border: none;
         font-family: 'Space Mono';
-        font-weight: 900;
-        color: hsl(184, 14%, 43%);
-        padding: 40px 43px 5px;
+        font-size: large;
+        font-weight: 500; 
+        height: 50px;
+        /* margin: 8px !important; */
+        width:  148px !important;
     }
 
-    /* Bill input form field */
+    #custom-tip-input {
+        color: hsl(184, 14%, 43%) !important;
+        cursor: pointer;
+        height: 50px;
+        margin: 5px;
+        text-align: center;
+        width: 45% !important;
+    }
+
     .form-control {
         background-color:hsl(189, 41%, 97%);
-        color: hsl(183, 100%, 15%);
         border: none;
+        color: hsl(184, 14%, 43%) !important;
         font-family: 'Space Mono';
         font-size: 24px;
         font-weight: 700;
-        margin: 5px 40px 50px;
-        padding: 10px;
+        margin-top: 5px;
         text-align: right;
-        width: 82% !important;
-    } 
-
-    /* Tip Percentage - including label, buttons, custom input */
-    .tip-selection-container .row {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        width: 99% !important;
     }
 
-    .tip-selection-container .btn,
-    .tip-selection-container #custom-tip-input {
-        width: 100%; /* Ensure full width for grid items */
+    .display-container {
+        background-color: hsl(183, 100%, 15%);
+        border-radius: 20px;
+        display: flex;
+        flex: 1 auto;
+        flex-direction: column;
+        width: 86vw !important;
     }
-
-
-
-
 }
 
-
-
+/* For desktop view */
 body {
-    align-items: center;
     background-color:  hsl(185, 41%, 84%);
+    overflow: hidden;
+}
+
+/* Splitter logo  */
+.logo-container {
     display: flex;
-    justify-content:  center;
-    min-height: 100vh;
+    justify-content: center;
 }
 
-input[type=number] {
-    -moz-appearance: textfield;
+.logo-container img {
+    margin: 5%;
 }
 
-/* Splitter Title */
-.center {
-    display: block;
-    margin: 0 auto;
-    padding: 140px 0px 80px;
-    text-align: center;
-}
-
-/* Overall tip calculator container */
 .tip-calculator-container {
-    position: relative;
     background-color: white;
     border-radius: 20px;
-    height: 500px;
-    width: 1000px;
-    margin: 0% 20%;
-    bottom: 10px;
-    right: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    padding: 35px;
+    width: 60vw;
+    height: 60vh;
 }
 
-/* Bill portion - including label, formfield, $ img */
-.bill-portion-container {
-    height: 150px;
-    margin-bottom: 15px;
+.input-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.bill-label, .tip-label, .number-of-people-label {
+    color: hsl(184, 14%, 43%);
+    display: flex;
+    font-family: 'Space Mono';
+    font-weight: 500;
 }
 
 .tip-selection-container {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
-.bill-label {
-    font-family: 'Space Mono';
-    font-weight: 500;
-    color: hsl(184, 14%, 43%);
-    padding: 40px 43px 5px;
+.tip-label {
+    margin-bottom: 5px;
 }
 
-/* $ image in formfield */ 
-.bill-portion-container img {
+/* images in formfield */ 
+.bill-portion-container img, .number-of-people-container img {
     position: relative;
-    left: 60px;
-    bottom: 90px;
+    left: 20px;
+    bottom: 40px; 
 }
 
-.form-control {
-    background-color:hsl(189, 41%, 97%);
-    color: hsl(183, 100%, 15%);
-    border: none;
-    font-family: 'Space Mono';
-    font-size: 24px;
-    font-weight: 700;
-    margin: 5px 40px 50px;
-    padding: 10px;
-    text-align: right;
-    width: 45%;
-}
-
-.form-control:focus {
-    border-color:  hsl(183, 100%, 15%);
-    border: 2px;
-    border-color:hsl(172, 67%, 45%);
-    border-style: solid;
-    color: hsl(183, 100%, 15%);;
-    cursor: pointer;
-    outline: none;
-    box-shadow: none !important;
-}
-
-.tip-label, .number-of-people-label {
-    font-family: 'Space Mono';
-    color: hsl(184, 14%, 43%);
-    padding: 5px 50px 5px;
-}
-
-.row.align-items-end {
-    margin: 10px 40px 5px;
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    right: 5px;
 }
 
 .btn-primary {
@@ -171,8 +138,8 @@ input[type=number] {
     font-size: large;
     font-weight: 500; 
     height: 50px;
-    margin: 5px;
-    width: 140px;
+    margin: 7px;
+    width: 27%;
 }
 
 .btn-primary:focus, .btn-primary:hover {
@@ -183,78 +150,92 @@ input[type=number] {
     outline: none !important;
 }
 
-.number-of-people-container img {
-    position: relative;
-    left: 65px;
-    bottom: 90px;
-}
-
-.calculation-container {
-    background-color: hsl(183, 100%, 15%);
-    border-radius: 20px;
-    bottom: 485px;
-    height: 430px;
-    left: 530px;
-    position: relative;
-    width: 440px;
-}
-
-#custom-tip-input, #custom-tip-input:hover {
+#custom-tip-input {
+    color: hsl(184, 14%, 43%) !important;
     cursor: pointer;
     height: 50px;
-    margin: 5px;
+    margin: 7px;
     text-align: center;
-    width: 140px;
+    width: 27%;
 }
 
-#custom-tip-input:focus {
+/* Removes arrows in Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Removes arrows in Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-control {
     background-color:hsl(189, 41%, 97%);
+    border: none;
+    color: hsl(184, 14%, 43%) !important;
+    font-family: 'Space Mono';
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 5px;
+    text-align: right;
+    width: 88%;
+}
+
+.form-control:focus, #custom-tip-input:focus {
+    border: 2px;
     border-color:hsl(172, 67%, 45%);
     border-style: solid;
-    color: hsl(183, 100%, 15%);
+    color: hsl(183, 100%, 15%) !important;
     cursor: pointer;
-    outline: none !important;
-    overflow-y: hidden !important;
+    outline: none;
     box-shadow: none !important;
 }
 
-#tip-amount-row {
-    left: 10%;
-    top: 10%;
-    position: relative;
+.number-of-people-container {
+    margin-top: 10px;
 }
 
-#total-amount-row {
-    left: 10%;
-    top: 15%;
-    position: relative;
+.display-container {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 20px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    height: 50vh;
+    padding: 30px;
+    width: 40vw;
 }
 
 .tip-amount-per-person-label, .total-amount-per-person-label {
     color:hsl(189, 41%, 97%);
     font-family: 'Space Mono';
     font-size: 16px;
+    padding-top: 12px;
 }
 
 .tip-amount-per-person-sublabel, .total-amount-per-person-sublabel {
     color:hsl(184, 14%, 56%);
     font-family: 'Space Mono';
     font-size: 15px;
-    font-weight: bolder;
+    font-weight: 500;
 }
 
 #tip-amount-per-person-display, #total-amount-per-person-display { 
     color: hsl(172, 67%, 45%);
+    display: flex;
     font-family: 'Space Mono';
-    font-size: 42px;
+    font-size: 46px;
     font-weight: 900;
-    margin-right: 75px;
+    justify-content: center;
 }
 
 .reset-button-row {
-    bottom: 50px;
-    right: 35px;
-    position: absolute;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 25%;
 }
 
 .btn-secondary {
@@ -263,12 +244,11 @@ input[type=number] {
     color: hsl(183, 100%, 15%);
     font-family: 'Space Mono';
     font-size: large;
-    font-weight: 900;
+    font-weight: 700;
     height: 55px;
-    opacity: 0.2 !important;
-    position:relative;
-    left: 10px;
-    width: 390px;
+    position: relative;
+    top: 20px;
+    width: 100%;
 }
 
 .btn-secondary:hover {
@@ -276,10 +256,5 @@ input[type=number] {
     border-style: none;
     color: hsl(183, 100%, 15%);
     cursor: pointer;
-    font-family: 'Space Mono';
-    font-size: large;
-    font-weight: 900;
-    height: 55px;
-    opacity: 1 !important;
-    width: 390px;
+
 }
